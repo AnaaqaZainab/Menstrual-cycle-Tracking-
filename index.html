@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menstrual Calendar Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🩸 Menstrual Calendar</h1>
+
+    <label>Period Start Date:</label>
+    <input type="date" id="periodStart" />
+    <label>Cycle Length (days):</label>
+    <input type="number" id="cycleLength" placeholder="e.g. 28" />
+
+    <button onclick="saveCycle()">Save Period</button>
+
+    <div id="calendar"></div>
+
+    <h3>Selected Day Log</h3>
+    <textarea id="dailyNote" placeholder="e.g. cramps, light flow..."></textarea>
+    <button onclick="saveNote()">Save Note</button>
+    <p id="logOutput"></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teen Emotion Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 How are you feeling today?</h1>
+    
+    <select id="moodSelect">
+      <option value="">Choose a mood</option>
+      <option value="😊">Happy</option>
+      <option value="😔">Sad</option>
+      <option value="😡">Angry</option>
+      <option value="😴">Tired</option>
+      <option value="😰">Anxious</option>
+      <option value="🤩">Excited</option>
+    </select>
+    <button onclick="saveMood()">Save Mood</button>
+
+    <h2>📅 Mood History</h2>
+    <ul id="moodList"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daily Health Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🩺 Daily Health Tracker</h1>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" />
+
+    <label>How are you feeling today?</label>
+    <div class="options">
+      <label><input type="checkbox" value="Cramps"> 😖 Cramps</label>
+      <label><input type="checkbox" value="Fatigue"> 😴 Fatigue</label>
+      <label><input type="checkbox" value="Workout"> 💪 Workout</label>
+      <label><input type="checkbox" value="Stress"> 😟 Stress</label>
+      <label><input type="checkbox" value="Depression"> 😢 Depression</label>
+      <label><input type="checkbox" value="Happy"> 😁 Happy</label>
+      <label><input type="checkbox" value="Normal"> 😐 Normal</label>
+      <label><input type="checkbox" value="Headache"> 🤒 Headache</label>
+    </div>
+
+    <button onclick="saveEntry()">Save Entry</button>
+
+    <h3>📋 Log:</h3>
+    <ul id="logList"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+<h3>💊 Pill Reminder</h3>
+<label>Reminder Time:</label>
+<input type="time" id="pillTime" />
+
+<button onclick="setPillReminder()">Set Reminder</button>
+<p id="pillStatus">No reminder set</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🌙 Sleep Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🌙 Sleep Tracker</h1>
+
+    <label for="sleepDate">Date:</label>
+    <input type="date" id="sleepDate" />
+
+    <label for="sleepTime">Sleep Time:</label>
+    <input type="time" id="sleepTime" />
+
+    <label for="wakeTime">Wake Time:</label>
+    <input type="time" id="wakeTime" />
+
+    <button onclick="saveSleep()">Save Sleep Log</button>
+
+    <h3>🕒 Sleep History:</h3>
+    <ul id="sleepLog"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<h3>📊 Cycle Stats</h3>
+<canvas id="cycleChart" width="400" height="200"></canvas>
+
+<h3>🧠 Symptom Frequency</h3>
+<canvas id="symptomChart" width="400" height="200"></canvas>
+<label>Usual Cycle Length (in days):</label>
+<input type="number" id="cycleLength" placeholder="e.g. 35" />
+<button onclick="saveCycleLength()">Save Cycle Info</button>
+<h3>🧘 PCOD Lifestyle Tips</h3>
+<ul>
+  <li>🥗 Eat a balanced, low-GI diet</li>
+  <li>🏃‍♀️ Exercise regularly (e.g. yoga, walking)</li>
+  <li>😴 Get 7–8 hours of sleep</li>
+  <li>🧠 Reduce stress through meditation</li>
+</ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PCOD Period Checker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🩺 PCOD Symptom Checker</h1>
+
+    <form id="pcodForm">
+      <label><input type="checkbox" name="symptom" value="irregular"> Irregular periods (missed or >35 days)</label><br>
+      <label><input type="checkbox" name="symptom" value="heavy"> Heavy or light bleeding</label><br>
+      <label><input type="checkbox" name="symptom" value="spotting"> Spotting between periods</label><br>
+      <label><input type="checkbox" name="symptom" value="acne"> Acne or oily skin</label><br>
+      <label><input type="checkbox" name="symptom" value="hair"> Excess facial/body hair</label><br>
+      <label><input type="checkbox" name="symptom" value="weight"> Sudden weight changes</label><br>
+      <label><input type="checkbox" name="symptom" value="mood"> Mood swings / fatigue</label><br>
+
+      <button type="button" onclick="checkPCOD()">Check Risk</button>
+    </form>
+
+    <p id="result"></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Holistic Wellness</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🧘 Holistic Wellness Tools</h1>
+
+    <section>
+      <h2>🍵 Self-Care Suggestions</h2>
+      <button onclick="showSelfCareTip()">Get Tip</button>
+      <p id="selfCareTip">Your wellness tip will appear here.</p>
+    </section>
+
+    <section>
+      <h2>🥗 Nutrition & Cravings Log</h2>
+      <input type="text" id="cravingInput" placeholder="What are you craving?" />
+      <button onclick="saveCraving()">Log Craving</button>
+      <p id="cravingLog"></p>
+      <p id="foodSuggestion"></p>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+<section class="safe-zone">
+  <h2>🤝 Safe Zone</h2>
+  <p>Get medically reviewed answers to your common questions:</p>
+
+  <button onclick="toggleFAQs()">📖 View FAQs</button>
+  <div id="faqList" style="display: none;">
+    <ul>
+      <li><strong>Q:</strong> What’s a normal cycle length?<br>
+          <strong>A:</strong> Between 21–35 days is considered normal.</li>
+      <li><strong>Q:</strong> Can I shower during my period?<br>
+          <strong>A:</strong> Yes! Daily hygiene is important during menstruation.</li>
+      <li><strong>Q:</strong> Is it okay to skip periods sometimes?<br>
+          <strong>A:</strong> Occasional changes are fine, but consistent skipping should be checked by a doctor.</li>
+      <li><strong>Q:</strong> What are safe ways to reduce cramps?<br>
+          <strong>A:</strong> Heat pads, gentle exercise, hydration, and some yoga poses may help.</li>
+    </ul>
+  </div>
+
+  <p>🔗 More help online:</p>
+  <ul>
+    <li><a href="https://kidshealth.org" target="_blank">TeensHealth by Nemours</a></li>
+    <li><a href="https://www.plannedparenthood.org" target="_blank">Planned Parenthood Resources</a></li>
+    <li><a href="https://youngwomenshealth.org" target="_blank">Center for Young Women’s Health</a></li>
+  </ul>
+</section>
